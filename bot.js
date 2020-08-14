@@ -89,6 +89,11 @@ client.on('message', msg => {
   if (msg.content.toLowerCase() === 'sa') {
       msg.reply('Aleyküm Selam Hoşgeldin !');
 }
+
+if (msg.content.toLowerCase() === 'ramiz karaeski') {
+    msg.channel.send('Yarrağın kardeş, güzelmiş...');
+}
+
 if (msg.content.toLowerCase() === 'ping') {
     msg.reply(client.ping + 'ms');
 }
@@ -140,4 +145,4 @@ client.on('error', e => {
   console.log(chalk.bgRed(e.replace(regToken, 'that was redacted')));
 });
 
-client.login(process.env.BOT_TOKEN);
+client.login(ayarlar.token);
